@@ -1,7 +1,7 @@
 const requestIp = require('request-ip');
 const express = require('express')
 const app = express()
-const port = process.env.PORT 3000
+const port = process.env.PORT || 3000
 
 const ipMiddleware = function(req, res, next) {
     const clientIp = requestIp.getClientIp(req); 
